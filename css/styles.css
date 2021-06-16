@@ -1,0 +1,1195 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: small;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+}
+
+button:focus {
+    outline: none;
+    border: 0;
+}
+
+.fa-caret-right {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* SVG Background */
+
+.svg-bg {
+    position: relative;
+    display: block;
+}
+
+.h-ln2 {
+    width: 100%;
+    position: absolute;
+    top: 32rem;
+    /* transform: rotate(-1deg); */
+    z-index: 1;
+}
+
+.h-ln {
+    width: 100%;
+    position: absolute;
+    top: 34rem;
+    /* transform: rotate(-1deg); */
+    z-index: 1;
+}
+
+/* Header Section */
+
+.container-fluid {
+    padding: 0 2% 6% 5%;
+}
+
+#header {
+    background-color: #f8ecdb;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+nav {
+    margin: 0 0 5rem;
+    padding: 0;
+}
+
+.nav-item, .nav-link {
+    color: #000;
+    padding: 0 1rem;
+}
+
+.nav-link:hover {
+    color: #e48d14;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    color: #000;
+}
+
+.sign-btn {
+    background-color: #fff;
+    color: #000;
+    font-size: 0.6rem;
+    padding: 0.7rem 1.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 3rem;
+    border-radius: 20px;
+    box-shadow: 1px 0.3px 10px rgb(207, 207, 207);
+    text-align: center;
+}
+
+.sign-btn:hover {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    font-size: 0.6rem;
+    border-radius: 20px;
+    box-shadow: 1px 0.3px 10px rgb(207, 207, 207);
+    text-align: center;
+}
+
+.custom-btn {
+    background-color: #e48d14;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    box-shadow: none;
+    font-size: 0.7rem;
+    padding: 0.7rem 1.5rem;
+    margin: 0.5rem;
+    border-radius: 20px;
+    box-shadow: 1px 0.3px 10px rgb(207, 207, 207);
+    text-align: center;
+}
+
+.custom-btn:hover {
+    background-color: #b36e0d;
+    color: #fff;
+    padding: 0.3 vrem 1.5rem;
+}
+
+/* Hero */
+
+.hero-title {
+    margin: 1rem 50rem 1rem 0.3rem;
+    font-size: 2rem;
+    line-height: 2.7rem;
+}
+
+.training-text {
+    color: #3c7edc;
+}
+
+.employee-text {
+    color: #e48d14;
+}
+
+.employee-text::before {
+    content: "Employees";
+    animation: animate infinite 5s;
+}
+
+.hero-paragraph {
+    width: 40%;
+    line-height: 1.4rem;
+}
+
+.getStart-btn {
+    background-color: #e48d14;
+    margin-top: 1.2%;
+    margin-right: 0.5rem;
+    color: #fff;
+    padding: 0.7rem 1.3rem;
+    box-shadow: none;
+    border: 0;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.getStart {
+    padding-right: 0.5rem;
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+/* Watch-Demo button */
+
+.getStart-watch-btn {
+    background-color: transparent;
+    border: 1px solid #000;
+    margin-top: 1.2%;
+    color: #000;
+    padding: 0.7rem 1rem;
+    box-shadow: none;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.getStart-watch {
+    font-size: 0.8rem;
+}
+
+.getStart-watch-btn:hover {
+    background-color: #e48d14;
+    border: 1px solid transparent;
+    margin-top: 1.2%;
+    color: #fff;
+}
+
+/* Embedded Modal Video */
+
+#fade {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+#light {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 42%;
+    max-width: 1000px;
+    max-height: 360px;
+    margin-left: -300px;
+    margin-top: -180px;
+    background: transparent;
+    z-index: 1002;
+    overflow: visible;
+}
+
+.boxclose:before {
+    content: "×";
+}
+
+#fade:hover~#boxclose {
+    display: none;
+}
+
+.dotted-arc {
+    border: 1px dashed #c7deff;
+    border-radius: 50%;
+    background: rgb(255, 243, 226);
+    width: 24rem;
+    height: 24rem;
+    position: absolute;
+    right: 10%;
+    top: 21%;
+    transform: rotate(0deg);
+    transition: transform 0.7s linear;
+    animation: rotate 7s infinite linear;
+}
+
+.lady-img {
+    position: absolute;
+    top: 22%;
+    right: 10%;
+    width: 38%;
+}
+
+.hero-fpic {
+    width: 10%;
+    position: absolute;
+    top: 18rem;
+    right: 29rem;
+    animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    -moz-animation: bounce 5s infinite;
+    -o-animation: bounce 5s infinite;
+}
+
+.hero-spic {
+    width: 8%;
+    position: absolute;
+    top: 22rem;
+    right: 7rem;
+    animation: bounce 15s infinite;
+    -webkit-animation: bounce 15s infinite;
+    -moz-animation: bounce 15s infinite;
+    -o-animation: bounce 15s infinite;
+}
+
+.hero-fo-pic {
+    width: 2%;
+    position: absolute;
+    top: 11rem;
+    right: 11.5rem;
+    animation: bounce 10s infinite;
+    -webkit-animation: bounce 10s infinite;
+    -moz-animation: bounce 10s infinite;
+    -o-animation: bounce 10s infinite;
+}
+
+/* Client Section */
+
+#clients {
+    background-color: #fff;
+    margin-bottom: 0;
+    padding: 0.1% 15% 5%;
+    text-align: center;
+    z-index: 1;
+}
+
+.client-title {
+    color: rgb(129, 129, 129);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.client-logo {
+    width: 10%;
+    padding: 12px;
+}
+
+/* Features section */
+
+#features {
+    position: relative;
+    padding: 3% 0 0 0;
+}
+
+.img-bg {
+    background-color: #c7deff;
+    border-radius: 0 15px 15px 0;
+    position: relative;
+    left: -10rem;
+    display: inline-block;
+    padding: 1.6rem;
+    padding-left: 0;
+}
+
+.feature-img-1 {
+    border-radius: 0 10px 10px 0;
+    width: 10rem;
+    padding-right: 5px;
+    margin-left: -50px !important;
+}
+
+.feature-img-2 {
+    width: 10rem;
+    border-radius: 10px;
+    padding-right: 5px;
+    margin: 0 6rem;
+}
+
+.feature-img {
+    width: 10rem;
+    border-radius: 10px;
+    padding-right: 5px;
+}
+
+/* Video(Feature) */
+
+#close {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+#f-video {
+    display: none;
+    position: absolute;
+    top: -255%;
+    left: 35%;
+    max-width: 1000px;
+    max-height: 360px;
+    margin-left: -300px;
+    margin-top: -180px;
+    background: transparent;
+    z-index: 1002;
+    overflow: visible;
+}
+
+#boxclose {
+    cursor: pointer;
+    color: #fff;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    z-index: 1002;
+    opacity: 0.9;
+}
+
+.boxclose:before {
+    content: "×";
+}
+
+#fade:hover~#boxclose {
+    display: none;
+}
+
+.vid-overlay {
+    position: absolute;
+    left: 18rem;
+    bottom: 2rem;
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.vid-overlay:focus {
+    outline: none;
+}
+
+.video-img {
+    width: 270px;
+    height: 180px;
+    border-radius: 20px;
+}
+
+.play-btn {
+    position: absolute;
+    left: 6.7rem;
+    bottom: 2.6rem;
+    font-size: 4rem;
+    color: #fff;
+}
+
+video {
+    border-radius: 10px;
+}
+
+.desc-container {
+    position: absolute;
+    right: 5rem;
+    top: 8rem;
+    width: 40%;
+}
+
+.f-description {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: rgb(160, 160, 160);
+    font-weight: 600;
+}
+
+.desc-container-2 {
+    margin-top: 7%;
+    position: absolute;
+    left: 9rem;
+    top: 20rem;
+    width: 23%;
+}
+
+.sf-description {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: #2672dd;
+    padding: 0.5rem 0;
+}
+
+.p-desc {
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+}
+
+.feature-btn {
+    border-radius: 50px;
+    margin-top: 6%;
+    padding: 0.7rem 1.2rem;
+}
+
+.b-instructor {
+    font-size: 0.7rem;
+}
+
+.s-img-bg {
+    background-color: transparent;
+    position: relative;
+    right: 5rem;
+    top: 23rem;
+    display: inline-block;
+    padding: 1.6rem;
+}
+
+.feature-img-one, .feature-img-two, .feature-img-three {
+    width: 12rem;
+    border-radius: 10px;
+    margin-right: 12px;
+    box-shadow: 1px 0.1px 10px rgb(228, 228, 228);
+}
+
+.kaffy-badge {
+    position: absolute;
+    top: 8.2rem;
+    right: 29.8rem;
+}
+
+.spoof-badge {
+    position: absolute;
+    top: 8.2rem;
+    right: 16.8rem;
+}
+
+.paintertainer-badge {
+    position: absolute;
+    top: 8.2rem;
+    right: 3.8rem;
+}
+
+/* Get Started Section */
+
+#getStarted {
+    margin: 40% 0 0 3.7rem;
+    padding: 0 5.5%;
+}
+
+.gs-img {
+    width: 25%;
+    border-radius: 10px;
+    box-shadow: 1px 0.3px 10px rgb(196, 196, 196);
+}
+
+.course-gs-img {
+    width: 20%;
+    position: absolute;
+    top: 116rem;
+    left: 15rem;
+    border-radius: 15px;
+    box-shadow: 1px 0.3px 10px rgb(207, 207, 207);
+}
+
+.gs-description {
+    position: absolute;
+    left: 50rem;
+    top: 110.8rem;
+    width: 350px;
+}
+
+.gs-texts {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: #2672dd;
+    padding: 0.5rem 0;
+}
+
+.gs-btn {
+    background-color: #e48d14;
+    color: #fff;
+}
+
+.gs-button {
+    font-size: 0.8rem;
+}
+
+/* Corporate section */
+
+#corporate-training {
+    background-color: rgb(129, 129, 129);
+    background-image: url(/images/cprt-bg.jpg);
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: 100%;
+    margin-top: 13%;
+    text-align: left;
+    position: relative;
+    padding: 10% 7%;
+    z-index: 1;
+}
+
+.cprt-title {
+    font-size: 2rem;
+    color: #e4be14;
+    font-weight: 500;
+    width: 30%;
+    line-height: 2.8rem;
+}
+
+.cprt-desc {
+    width: 26%;
+    margin-top: 1.5%;
+    line-height: 1.2rem;
+    color: #eee;
+}
+
+.cprt-btn {
+    margin-top: 20px;
+    background-color: #e48d14;
+    color: #fff;
+}
+
+.cprt-fpic {
+    border-radius: 10px;
+    width: 14%;
+    position: absolute;
+    right: 24rem;
+    box-shadow: 1px -3px 15px rgb(139, 139, 139);
+}
+
+.cprt-fo-pic {
+    width: 2%;
+    position: absolute;
+    right: 4.3rem;
+    top: 7.5rem;
+    z-index: 1;
+}
+
+.cprt-spic {
+    width: 10%;
+    position: absolute;
+    right: 5rem;
+    top: 8rem;
+    border-radius: 10px;
+    box-shadow: -5px 1px 20px rgb(97, 97, 97);
+}
+
+.cprt-n-fpic {
+    width: 20%;
+    position: absolute;
+    right: 12rem;
+    top: 13.7rem;
+    z-index: -1;
+}
+
+.cprt-rg-pic {
+    width: 10%;
+    position: absolute;
+    right: 7rem;
+    top: 19rem;
+}
+
+/* Instructor Section */
+
+#instructor {
+    padding: 3% 7%;
+    margin-bottom: 22%;
+}
+
+.dev-title {
+    width: 98%;
+}
+
+.instructor-desc {
+    margin-top: 190%;
+    position: absolute;
+    left: 7rem;
+    top: 20rem;
+    width: 23%;
+}
+
+.instructor-card {
+    width: 30%;
+    position: absolute;
+    top: 115rem;
+    right: 18rem;
+    border-radius: 10px;
+    z-index: 2;
+    box-shadow: 1px -3px 15px rgb(196, 196, 196);
+}
+
+.instructor-images {
+    width: 45%;
+    position: absolute;
+    top: 70rem;
+    right: 8rem;
+    border-radius: 10px;
+}
+
+.instructor-img {
+    width: 45%;
+    position: absolute;
+    top: 110rem;
+    right: 8rem;
+    border-radius: 10px;
+}
+
+.instructor-fp {
+    width: 25%;
+    position: absolute;
+    top: 120rem;
+    right: 3rem;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 1px -3px 15px rgb(196, 196, 196);
+}
+
+/* Testimoial Section */
+
+#testimonials {
+    margin-top: 10rem;
+    padding: 10% 8%;
+}
+
+.testimonial-container {
+    background-color: #eef8ff;
+    border-radius: 15px;
+    padding: 3% 5% 18%;
+    text-align: center;
+}
+
+.testimonial-svg {
+    width: 100%;
+    position: absolute;
+    top: 208rem;
+    z-index: -1;
+}
+
+.testimonial-title {
+    font-size: 2.3rem;
+    font-weight: 500;
+    padding: 1%;
+}
+
+.star-icon {
+    font-size: 1.2rem;
+    color: #ffae3d;
+    padding-bottom: 1.9%;
+}
+
+/* First Testimony */
+
+.f-testimony {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 3px 10px rgb(192, 192, 192);
+}
+
+.s-testimony {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 3px 10px rgb(192, 192, 192);
+}
+
+.f-client {
+    width: 7%;
+    border-radius: 50%;
+    position: absolute;
+    top: 220rem;
+    left: 22rem;
+}
+
+.s-client {
+    width: 7%;
+    border-radius: 50%;
+    position: absolute;
+    top: 220rem;
+    right: 22.5rem;
+}
+
+.cl1-name {
+    position: absolute;
+    top: 227rem;
+    left: 21rem;
+}
+
+.cl2-name {
+    position: absolute;
+    top: 227rem;
+    right: 21.5rem;
+}
+
+.fc-name {
+    color: #2672dd;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.fc-title {
+    font-size: 8.5px;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    color: rgb(145, 145, 145);
+    margin-bottom: 0;
+}
+
+.fc-city {
+    font-size: 9px;
+}
+
+/* Pricing plan */
+
+#pricing-plan {
+    background-color: #c7deff;
+    margin: 3rem 0 0 0;
+    padding: 17% 8%;
+}
+
+
+/* First plan */
+
+.f-plan {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    position: absolute;
+    top: 241rem;
+    left: 5rem;
+    box-shadow: 1px 3px 10px rgb(192, 192, 192);
+}
+
+.duration-cost {
+    font-size: 250%;
+    color: #002255;
+}
+
+.price-duration {
+    position: absolute;
+    top: 2.5rem;
+    left: 6.4rem;
+    margin-bottom: 2.7rem;
+}
+
+.for-individuals {
+    color: #2672dd;
+    font-size: 0.7rem;
+}
+
+.pcard-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+.pcard-lst {
+    list-style-type: none;
+    line-height: 2rem;
+    font-size: 0.7rem;
+}
+
+.fprice-btn {
+    width: 8rem;
+    padding: 6px;
+}
+
+
+/* Second-plan */
+
+.s-plan {
+    background-color: #002255;
+    border-radius: 10px;
+    padding: 30px;
+    color: #fff;
+    position: absolute;
+    top: 241rem;
+    left: 23rem;
+}
+
+.s-duration-cost {
+    font-size: 250%;
+}
+
+.s-price-duration {
+    position: absolute;
+    top: 2.4rem;
+    left: 7.7rem;
+}
+
+.for-schools {
+    color: #e48d14;
+    font-size: 0.7rem;
+    margin-bottom: 3.3rem;
+}
+
+/* .pcard-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 3.5rem;
+} */
+
+.s-pcard-lst {
+    list-style-type: none;
+    line-height: 2rem;
+    font-size: 0.7rem;
+    margin-bottom: 3.6rem;
+}
+
+.sprice-btn {
+    width: 8rem;
+    padding: 6px;
+    
+}
+
+/* third plan */
+
+.th-plan {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    position: absolute;
+    top: 241rem;
+    left: 38rem;
+    box-shadow: 1px 3px 10px rgb(192, 192, 192);
+}
+
+.th-duration-cost {
+    font-size: 250%;
+}
+
+.th-price-duration {
+    position: absolute;
+    top: 2.4rem;
+    left: 7.5rem;
+}
+
+.for-sme {
+    color: #2672dd;
+    font-size: 0.7rem;
+    margin-bottom: 3.1rem;
+}
+
+.thprice-btn    {
+    width: 8rem;
+    padding: 6px;
+}
+
+/* .pcard-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 3.5rem;
+} */
+
+.th-pcard-lst {
+    list-style-type: none;
+    line-height: 2rem;
+    font-size: 0.7rem;
+    text-align: left;
+    margin-bottom: 3.9rem;
+}
+
+/* Button for price plan */
+
+.p-gt-btn {
+    padding-right: 10px;
+    font-size: 0.8rem;
+}
+
+.price-arrow    {
+    font-size: 1rem;
+}
+
+/* End of Button for price plan */
+
+.fprice-btn, .thprice-btn {
+    background-color: #e48d14;
+    color: #fff;
+}
+
+.small-title    {
+    position: absolute;
+    top: 252rem;
+    right: 16rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #04224d;
+}
+
+.p-description  {
+    position: absolute;
+    top: 255rem;
+    right: 4.3rem;
+    width: 350px;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #04224d;
+}
+
+/* Footer Section */
+
+#footer {
+    padding: 7% 6% 1%;
+    background-color: #fff;
+}
+
+.footer-logo    {
+    margin-bottom: 2rem;
+}
+
+.footer-abt {
+    margin-bottom: 2rem;
+    width: 33%;
+    font-size: 0.7rem;
+    color: #aaa;
+}
+
+.footer-input  {
+    padding: 10px 60px 10px 15px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 1px 3px 10px rgb(189, 189, 189);
+}
+
+.footer-input:focus {
+    outline: none;
+}
+
+.footer-email-btn   {
+    padding: 7px 20px;
+    border-radius: 20px;
+    background-color: #2672dd;
+    color: #fff;
+    position: relative;
+    top: -0.1rem;
+    right: 3rem;
+}
+
+.Subscribe-btn  {
+    font-size: 0.8rem;
+}
+
+
+.company    {
+    position: absolute;
+    top: 281rem;
+    left: 36rem;
+}
+
+.comp-title, .solution-title, .more-title, .legal-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2672dd;
+    margin-bottom: 2rem;
+}
+
+.footer-lst{
+    list-style-type: none;
+    color: #000;
+    font-size: 0.7rem;
+}
+
+.footer-lst a{
+    color: #000;
+    text-decoration: none;
+    line-height: 2rem;
+}
+
+.footer-lst a:hover{
+    color: #e48d14;
+}
+
+.solution  {
+    position: absolute;
+    top: 281rem;
+    left: 47rem;
+}
+
+.more   {
+    position: absolute;
+    top: 281rem;
+    left: 63rem;
+}
+
+.legal  {
+    position: absolute;
+    top: 281rem;
+    left: 74rem;
+}
+
+
+.copyright  {
+    padding: 10% 0 0 0;
+    text-align: center;
+    font-weight: 500;
+    color: #aaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************** Hover Effect ***********************************************/
+
+/* for start free trial btn*/
+
+.getStart-btn:hover::before {
+    transform: scaleX(1);
+    color: rgb(255, 255, 255) !important;
+    z-index: -1;
+}
+
+.getStart-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ac690c;
+    z-index: 1;
+    border-radius: 20px;
+    transition: transform 0.5s;
+    transition-timing-function: ease;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform: scaleX(0);
+}
+
+/* For Watch Demo */
+
+/* .getStart-watch-btn:hover::before {
+    transform: scaleX(1);
+    color: rgb(255, 255, 255) !important;
+    z-index: -1;
+}
+
+.getStart-watch-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ac690c;
+    z-index: 1;
+    border: 0;
+    border-radius: 20px;
+    transition: transform 0.5s;
+    transition-timing-function: ease;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform: scaleX(0);
+} */
+
+/***********************************************************************Animation kits***************************************************/
+
+/* For the bouncing images in the hero section */
+
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-30px);
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+    }
+}
+
+@-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+    }
+    40% {
+        -moz-transform: translateY(-30px);
+    }
+    60% {
+        -moz-transform: translateY(-15px);
+    }
+}
+
+@-o-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -o-transform: translateY(0);
+    }
+    40% {
+        -o-transform: translateY(-30px);
+    }
+    60% {
+        -o-transform: translateY(-15px);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* For changing texts in the hero section */
+
+@keyframes animate {
+    0% {
+        content: "Employees";
+    }
+    50% {
+        content: "Students";
+    }
+    75% {
+        content: "Employees";
+    }
+}
